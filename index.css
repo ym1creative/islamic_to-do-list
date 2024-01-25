@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Cairo";
+}
+:root {
+    --color: #077a59; /* Default color */
+    --secolor:#05291fa1;
+    --btcolor:#077a59;
+  }
+body{
+    background: linear-gradient(32deg, #002f23, #06956c);
+    direction: rtl;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+}
+.bod{
+    min-height: 100vh;
+    direction: rtl;
+    background-size: cover;
+    background-position: center;
+    background-image: url("pexels-victor-lavaud-3361480.jpg");
+}
+.head{
+    display: flex;
+    background: var(--secolor);
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-bottom: 3rem;
+}
+h1{
+    color:white;
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+.missons{
+    gap: 1rem;
+    direction: rtl;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+input[type="checkbox"]{
+    border-radius: 50%;
+    border: 2px solid white;
+    height: 5rem;
+    width: 5rem;
+    background: transparent;
+    appearance: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    
+}
+input[type="checkbox"]:hover{
+   
+    background-color: #0002017a;
+}
+input[type="checkbox"]:checked{
+    background-color: var(--btcolor);
+}
+
+input[type="checkbox"]::after{
+    cursor: pointer;
+    content: "\f00c";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    font-size: 3rem;
+    color: transparent;
+    transition: 0.5s;
+}
+input[type="checkbox"]:checked::after{
+    color: white;
+}
+.wow{
+    gap: 10rem;
+    position: relative;
+    transition: 0.8s;
+    box-shadow: 0px 5px 10px #000000c9;
+    border: 2px solid #ffffff;
+    padding: 1rem;
+    BORDER-RADIUS: 10vh;
+    background: var(--secolor);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.wow::after{
+    content:"";
+    position: absolute;
+}
+label{
+    color: white;
+    cursor: pointer;    
+    font-size: 2rem;
+    font-weight: bold;
+}
+#addItemForm #add{
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    background: var(--btcolor);
+
+    border: none;
+    border-radius: 20px;
+}
+#addItemForm{
+    margin-bottom: 5rem;
+    padding: 10px;
+    background: var(--color);
+    border-radius: 20px;
+    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#newItem{
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: none;
+    font-weight: bold;
+    color: white;
+    border: none;
+    background: #0e0404bf;
+  
+}
+#Delete{
+    font-weight: bold;
+    color: white;
+    background: var(--btcolor);
+
+    border: none;
+    border-radius: 20px;
+    width: fit-content;
+    cursor: pointer;
+}
+.options{
+    transition: 0.4s ease-out;
+    z-index: 1000;
+    display: flex;
+    position: fixed;
+    inset: 0 0 0 57%;
+    background: var(--color);
+    justify-content: center;
+    align-items: center;
+    transform: translateX(100%);
+}
+.options[data-visible="true"]{
+    transform: translateX(0%);
+
+}
+.slider-option{
+    position: fixed;
+    cursor: pointer;
+    margin-inline: 2rem;
+    position: relative;
+    aspect-ratio: 1;
+    width: 2.5rem;
+    z-index: 9999;
+    background-image: url(menu.png);
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+    border: none;
+}
+.slider-option[aria-expanded="true"]{
+    background-image: url("close.png");
+}
+
+#imageForm{
+    display: flex;
+    margin-inline: 2rem;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+.color{
+    box-shadow: 5px 5px 1px #00000080;
+    border-radius: 10vh;
+    padding: 20px;
+    background: #0000002e;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+}
+
+
+*:focus{
+    border-radius: 0;
+    outline: none;
+  }
+  
+  ::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  
+  ::-webkit-color-swatch{
+   
+    border-radius: 40px;
+  }
+  
+
+.bac{
+    box-shadow: 5px 5px 1px #00000080;
+    border-radius: 10vh;
+    padding: 20px;
+    background: #0000002e;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: max-content;
+
+}
+
+
+.color input[type="color"]{
+    width: 5rem;
+    background: transparent;
+    border: none;
+    height: 2rem;
+}
+#color-bt{
+    box-shadow: 2px 5px 0px #0000009e;
+    font-weight: bold;
+    padding: 5px;
+    color: white;
+    border-radius: 50px;
+    background: var(--secolor);
+    font-size: 1.6rem;
+    width: 4rem;
+    border: none;
+}
+#image-bt{
+    box-shadow: 2px 5px 0px #0000009e;
+    font-weight: bold;
+    padding: 5px;
+    color: white;
+    border-radius: 50px;
+    background: var(--secolor);
+    font-size: 1.6rem;
+    border: none;
+}
+
+@media screen and (max-width: 790px){
+    #addItemForm{
+        flex-direction: column;
+        align-items: center;
+    }
+    input[type="checkbox"]{width: 4rem;height: 4rem;} input[type="checkbox"]::after{font-size: 3rem;}  .head h1{font-size: 2rem;}#addItemForm label{font-size: 2rem;}#newItem{font-size:2rem;}#Delete{font-size: 2rem;}#add{font-size: 2rem;}.wow{ gap: 8rem;justify-content: center;}.wow label{font-size: 2.5rem;}
+    .options{inset: 0 0 0 20%;}.himage{font-size: 2rem;}.hcolor{font-size: 1.7rem;}#imageInput{width: 18vh;}
+}
+@media screen and (min-width: 790px){
+  
+    #addItemForm label{font-size: 2rem;}#newItem{font-size:2rem;}#Delete{font-size: 1.5rem;}#add{font-size: 1.5rem;}.head h1{font-size: 3rem;}
+}
+@media screen and (max-width: 360px){
+  
+    input[type="checkbox"]{width: 4rem;height: 4rem;} input[type="checkbox"]::after{font-size: 3rem;}  .head h1{font-size: 1.8rem;}#addItemForm label{font-size: 1.5rem;}#newItem{font-size:1.5rem;}#Delete{font-size: 1.5rem;}#add{font-size: 1.5rem;}.wow{ gap: 2.2rem;justify-content: center;}.wow label{font-size: 2rem;}
+    .options{inset: 0 0 0 10%;}.himage{font-size: 1.7rem;}.hcolor{font-size: 1.7rem;}#imageInput{width: 18vh;}.slider-option{width: 2rem;}
+}
+@media screen and (max-width: 320px){
+  
+    input[type="checkbox"]{width: 4rem;height: 4rem;} input[type="checkbox"]::after{font-size: 3rem;}  .head h1{font-size: 1.5rem;}#addItemForm label{font-size: 1.1rem;}#newItem{font-size:1.1rem;}#Delete{font-size: 1.1rem;}#add{font-size: 1.1rem;}.wow{ gap: 1.5rem;justify-content: center;}.wow label{font-size: 2rem;}
+    .options{inset: 0 0 0 0%;}.slider-option{margin-inline: 1rem;width: 2rem;}.himage{font-size: 1.5rem;}.hcolor{font-size: 1.5rem;}#imageInput{width: 18vh;}
+}

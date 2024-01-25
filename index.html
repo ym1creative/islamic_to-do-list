@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almarai&family=Cairo:wght@200;600&family=El+Messiri&family=Inter:wght@300;400;500&family=Nunito:wght@300;400&display=swap" rel="stylesheet">
+   
+    <title>list To Do</title>
+</head>
+<body>
+<div class="bod" id="bod">
+      
+<div class="head">
+  <h1>ماذا تريد ان تفعل ؟</h1>
+  <button class="slider-option" aria-expanded="false">
+</div>
+<div class="missons" id="mission">
+  <form id="addItemForm">
+      <label for="newItem">اضافه شي جديد ليومك:</label>
+      <input type="text" id="newItem" required>
+      <button type="button" id="add" onclick="addItem()">اضافه</button>
+      <button type="button" id="Delete" onclick="deleteItem()">مسح الشي الذي فعلته</button>
+    </form>
+   
+      
+    </button>
+   <div class="options" data-visible="false">
+    <form id="imageForm">
+      <div class="color">
+          <label class="hcolor" for="colorPicker">تغير اللون الصفحه</label>
+          <input type="color" id="colorPicker" value="#ff0000">
+          <label class="hcolor" for="colorPicker1">تغير لون المهام</label>
+          <input type="color" id="colorPicker1" value="#ff0000">
+          <label class="hcolor" for="colorPicker2">تغير لون الازرار</label>
+          <input type="color" id="colorPicker2" value="#ff0000">
+          <button id="color-bt" type="button" onclick="changeRootColor()">تغير</button>
+      </div>
+     <div class="bac">
+          <label class="himage" for="imageInput">تغير خلفيه الصفحه</label>
+          <input type="file" id="imageInput" accept="image/*">
+          <button id="image-bt" type="button" onclick="setAsBackground()">اجعله خلفيه</button>
+     </div>
+    </form>
+   </div>
+    <!-- Add a button for deleting items -->
+    
+    <div class="wow"><label>الصلاه</label><input type="checkbox"></div>
+    <div class="wow"><label>القران</label><input type="checkbox"></div>
+</div>
+
+
+</div>
+
+  <script src="index.js"></script>
+</body>
+</html>
