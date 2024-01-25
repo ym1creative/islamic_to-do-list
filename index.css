@@ -17,6 +17,7 @@ body{
 
 }
 .bod{
+    overflow: hidden;
     min-height: 100vh;
     direction: rtl;
     background-size: cover;
@@ -149,6 +150,7 @@ label{
     cursor: pointer;
 }
 .options{
+ 
     transition: 0.4s ease-out;
     z-index: 1000;
     display: flex;
@@ -158,6 +160,7 @@ label{
     justify-content: center;
     align-items: center;
     transform: translateX(100%);
+    stroke: #0000009e;
 }
 .options[data-visible="true"]{
     transform: translateX(0%);
@@ -186,9 +189,9 @@ label{
     margin-inline: 2rem;
     height: 100%;
     width: 100%;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-start;
     gap: 1rem;
     
 }
@@ -261,6 +264,14 @@ label{
     font-size: 1.6rem;
     border: none;
 }
+.hcolor{
+    font-size: 1rem;
+    
+}
+.himage{
+    font-size: 1rem;
+}
+#imageInput{width: 18vh;font-size: 1rem;}
 
 @media screen and (max-width: 790px){
     #addItemForm{
@@ -268,7 +279,7 @@ label{
         align-items: center;
     }
     input[type="checkbox"]{width: 4rem;height: 4rem;} input[type="checkbox"]::after{font-size: 3rem;}  .head h1{font-size: 2rem;}#addItemForm label{font-size: 2rem;}#newItem{font-size:2rem;}#Delete{font-size: 2rem;}#add{font-size: 2rem;}.wow{ gap: 8rem;justify-content: center;}.wow label{font-size: 2.5rem;}
-    .options{inset: 0 0 0 20%;}.himage{font-size: 2rem;}.hcolor{font-size: 1.7rem;}#imageInput{width: 18vh;}
+    .options{inset: 0 0 0 20%;}.himage{font-size: 1rem;}.hcolor{font-size: 1rem;}#imageInput{width: 18vh;}
 }
 @media screen and (min-width: 790px){
   
@@ -277,10 +288,10 @@ label{
 @media screen and (max-width: 360px){
   
     input[type="checkbox"]{width: 4rem;height: 4rem;} input[type="checkbox"]::after{font-size: 3rem;}  .head h1{font-size: 1.8rem;}#addItemForm label{font-size: 1.5rem;}#newItem{font-size:1.5rem;}#Delete{font-size: 1.5rem;}#add{font-size: 1.5rem;}.wow{ gap: 2.2rem;justify-content: center;}.wow label{font-size: 2rem;}
-    .options{inset: 0 0 0 10%;}.himage{font-size: 1.7rem;}.hcolor{font-size: 1.7rem;}#imageInput{width: 18vh;}.slider-option{width: 2rem;}
+    .options{inset: 0 0 0 10%;}.himage{font-size: 1rem;}.hcolor{font-size: 1rem;}#imageInput{width: 18vh;}.slider-option{width: 2rem;}
 }
 @media screen and (max-width: 320px){
   
     input[type="checkbox"]{width: 4rem;height: 4rem;} input[type="checkbox"]::after{font-size: 3rem;}  .head h1{font-size: 1.5rem;}#addItemForm label{font-size: 1.1rem;}#newItem{font-size:1.1rem;}#Delete{font-size: 1.1rem;}#add{font-size: 1.1rem;}.wow{ gap: 1.5rem;justify-content: center;}.wow label{font-size: 2rem;}
-    .options{inset: 0 0 0 0%;}.slider-option{margin-inline: 1rem;width: 2rem;}.himage{font-size: 1.5rem;}.hcolor{font-size: 1.5rem;}#imageInput{width: 18vh;}
+    .options{inset: 0 0 0 0%;}.slider-option{margin-inline: 1rem;width: 2rem;}.himage{font-size: 1rem;}.hcolor{font-size: 1rem;}#imageInput{width: 18vh;}
 }
