@@ -285,7 +285,7 @@ label{
   
     #addItemForm label{font-size: 2rem;}#newItem{font-size:2rem;}#Delete{font-size: 1.5rem;}#add{font-size: 1.5rem;}.head h1{font-size: 3rem;}
 }
-@media screen and (max-width: 360px){
+@media screen and (max-width: 495px){
   
     input[type="checkbox"]{width: 4rem;height: 4rem;} input[type="checkbox"]::after{font-size: 3rem;}  .head h1{font-size: 1.8rem;}#addItemForm label{font-size: 1.5rem;}#newItem{font-size:1.5rem;}#Delete{font-size: 1.5rem;}#add{font-size: 1.5rem;}.wow{ gap: 2.2rem;justify-content: center;}.wow label{font-size: 2rem;}
     .options{inset: 0 0 0 10%;}.himage{font-size: 1rem;}.hcolor{font-size: 1rem;}#imageInput{width: 18vh;}.slider-option{width: 2rem;}
