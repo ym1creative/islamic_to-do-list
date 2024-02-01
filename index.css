@@ -30,7 +30,6 @@ body{
     justify-content: flex-end;
     align-items: center;
     flex-direction: row-reverse;
-    margin-bottom: 3rem;
 }
 h1{
     color:white;
@@ -108,15 +107,18 @@ label{
     font-weight: bold;
 }
 #addItemForm #add{
+    text-shadow: 2px 2px 0px #0000005e;
     cursor: pointer;
     font-weight: bold;
     color: white;
     background: var(--btcolor);
-
+    padding-inline: 5px;
     border: none;
     border-radius: 20px;
 }
 #addItemForm{
+    box-shadow: 2px 2px 0px var(--btcolor);
+    text-shadow: 2px 2px 0px #0000005e;
     margin-bottom: 5rem;
     padding: 10px;
     background: var(--color);
@@ -130,6 +132,7 @@ label{
 }
 
 #newItem{
+    box-shadow: 2px 2px 0px var(--btcolor);
     text-align: center;
     border-radius: 20px;
     box-shadow: none;
@@ -140,10 +143,11 @@ label{
   
 }
 #Delete{
+    padding-inline: 5px;
     font-weight: bold;
     color: white;
     background: var(--btcolor);
-
+    text-shadow: 2px 2px 0px #0000005e;
     border: none;
     border-radius: 20px;
     width: fit-content;
@@ -278,8 +282,69 @@ label{
         flex-direction: column;
         align-items: center;
     }
+    #athan{flex-direction: column;align-items: center;gap: 1rem;}.salah{    border-bottom: 2px solid var(--btcolor);
+        padding-inline: 5px;
+        background: var(--secolor);
+        border-radius: 20px;
+    }
     input[type="checkbox"]{width: 4rem;height: 4rem;} input[type="checkbox"]::after{font-size: 3rem;}  .head h1{font-size: 2rem;}#addItemForm label{font-size: 2rem;}#newItem{font-size:2rem;}#Delete{font-size: 2rem;}#add{font-size: 2rem;}.wow{ gap: 8rem;justify-content: center;}.wow label{font-size: 2.5rem;}
     .options{inset: 0 0 0 20%;}.himage{font-size: 1rem;}.hcolor{font-size: 1rem;}#imageInput{width: 18vh;}
+}
+.date{
+    margin-bottom: 2rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* background: var(--secolor); */
+    padding: 10px;
+    border-radius: 40px;
+    justify-content: center;
+}
+#date{
+    box-shadow: 1px 3px 0px var(--btcolor);
+    height: max-content;
+    color: white;
+    background: transparent;
+    border: none;
+    font-size: 1.3rem;
+    background: var(--color);
+    padding-inline: 10px;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+#playlist1{
+    font-size: 1.3rem;
+    font-weight: bold;
+    top: 0;
+    color: white;
+    position: absolute;
+    /* background: aqua; */
+    padding: 20px;
+}
+#athan{
+   
+    padding: 10px;
+    text-shadow: 2px 2px 0px #0000005e;
+    box-shadow: 2px 2px 0px var(--btcolor);
+    padding-inline: 15px;
+    border-radius: 0px 0px 50px 50px;
+    background: var(--secolor);
+    font-size: 2rem;
+    gap: 2rem;
+    color: white;
+    display: flex;
+    font-weight: bold;
+
+}
+.salah{
+    font-size: 1.5rem;
 }
 @media screen and (min-width: 790px){
   
@@ -290,8 +355,8 @@ label{
     input[type="checkbox"]{width: 4rem;height: 4rem;} input[type="checkbox"]::after{font-size: 3rem;}  .head h1{font-size: 1.8rem;}#addItemForm label{font-size: 1.5rem;}#newItem{font-size:1.5rem;}#Delete{font-size: 1.5rem;}#add{font-size: 1.5rem;}.wow{ gap: 2.2rem;justify-content: center;}.wow label{font-size: 2rem;}
     .options{inset: 0 0 0 10%;}.himage{font-size: 1rem;}.hcolor{font-size: 1rem;}#imageInput{width: 18vh;}.slider-option{width: 2rem;}
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width: 350px){
   
     input[type="checkbox"]{width: 4rem;height: 4rem;} input[type="checkbox"]::after{font-size: 3rem;}  .head h1{font-size: 1.5rem;}#addItemForm label{font-size: 1.1rem;}#newItem{font-size:1.1rem;}#Delete{font-size: 1.1rem;}#add{font-size: 1.1rem;}.wow{ gap: 1.5rem;justify-content: center;}.wow label{font-size: 2rem;}
-    .options{inset: 0 0 0 0%;}.slider-option{margin-inline: 1rem;width: 2rem;}.himage{font-size: 1rem;}.hcolor{font-size: 1rem;}#imageInput{width: 18vh;}
+    .options{inset: 0 0 0 0%;}.slider-option{margin-inline: 1rem;width: 2rem;}.himage{font-size: 1rem;}.hcolor{font-size: 1rem;}#imageInput{width: 18vh;}.date{flex-direction: column;align-items: flex-start;}
 }

@@ -1,7 +1,9 @@
 function addItem() {
     var newItemText = document.getElementById("newItem").value;
-    
+    let date_value=document.getElementById("date").value
     if (newItemText.trim() !== "") {
+      var newDiv1 = document.createElement("div");
+      newDiv1.className="date"
       var newDiv = document.createElement("div");
       newDiv.className = "wow";
       
@@ -10,15 +12,21 @@ function addItem() {
       
       var newCheckbox = document.createElement("input");
       newCheckbox.type = "checkbox";
-      
+
+      var newDate=document.createElement("input")
+      newDate.type="datetime-local";
+      newDate.id="date"
+
       newDiv.appendChild(newLabel);
       newDiv.appendChild(newCheckbox);
-      
+
+      newDiv1.appendChild(newDate)
+      newDiv1.appendChild(newDiv)
       // Find the container using getElementById instead of querySelector
       var container = document.getElementById("mission");
       
       // Append the newDiv to the container
-      container.appendChild(newDiv);
+      container.appendChild(newDiv1);
       
       // Clear the input field after adding the item
       document.getElementById("newItem").value = "";
@@ -30,7 +38,7 @@ function addItem() {
 
     checkboxes.forEach(function (checkbox) {
       // Remove the parent div (wow) of the checked checkbox
-      checkbox.parentNode.remove();
+      checkbox.parentNode.parentNode.remove();
     });
   }
 
@@ -80,3 +88,40 @@ function addItem() {
       document.documentElement.style.setProperty('--btcolor', colorPicker2.value)
     }
 
+let playlistContainer=document.getElementById("imageForm")
+let athan=document.getElementById("athan")
+    function togglePlaylist() {
+
+      if (playlistContainer.style.display === 'none') {
+          playlistContainer.style.display = 'flex';
+          athan.style.display="none"
+
+      } else {
+        athan.style.display="block"
+          playlistContainer.style.display = 'none';
+          document.getElementById('showPlaylistBtn').innerText = 'Show Playlist';
+      }
+  }
+  let cards = document.getElementById("athan");
+
+
+
+// function getAthan() {
+//     fetch("https://api.aladhan.com/v1/timingsByCity/28-01-2024?city=Cairo&country=Egypt&method=8")
+//         .then(response => response.json())
+//         .then(data => {
+//             let times = data.data.timings;
+//             let pp = ""; // Declare the pp variable
+
+//             let prayerNames = ['Fajr', 'Dhuhr', 'Asr', 'Maghrib', 'Isha'];
+
+//             for (let name of prayerNames) {
+//                 pp += `<div class="salah">${name}: ${times[name]}</div>`; // Append prayer times
+//             }
+
+//             cards.innerHTML = pp; // Update the innerHTML of the cards element
+//         })
+//         .catch(error => {
+//             console.error('Error fetching athan:', error);
+//         });
+// }
