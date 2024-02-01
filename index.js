@@ -104,7 +104,7 @@ let athan=document.getElementById("athan")
   }
   let cards = document.getElementById("athan");
 
-
+getAthan();
 
 // function getAthan() {
 //     fetch("https://api.aladhan.com/v1/timingsByCity/28-01-2024?city=Cairo&country=Egypt&method=8")
